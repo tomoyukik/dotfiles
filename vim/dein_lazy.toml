@@ -1,0 +1,39 @@
+[[plugins]]
+  repo = 'Shougo/unite.vim'
+
+[[plugins]]
+  repo = 'Shougo/neomru.vim'
+  on_source = ['unite.vim']
+
+[[plugins]]
+  repo = "davidhalter/jedi-vim"
+  on_ft = ['python']
+
+
+[[plugins]]
+  repo = 'cespare/vim-toml'
+  on_ft = ['toml']
+
+# Haskell
+[[plugins]]
+  repo = 'neovimhaskell/haskell-vim'
+  on_ft = ['haskell']
+
+# Ruby
+[[plugins]]
+  repo = 'ngmy/vim-rubocop'
+  on_ft = ['ruby']
+[[plugins]]
+  repo = 'vim-ruby/vim-ruby'
+  on_ft = ['ruby']
+[[plugins]]
+  repo = 'tpope/vim-endwise'
+  on_ft = ['ruby']
+[[plugins]]
+  repo = 'Shougo/neocomplcache-rsense.vim'
+  on_ft = ['ruby']
+
+# rails
+[[plugins]]
+  repo = 'tpope/vim-rails'
+  on_ft = ['ruby']

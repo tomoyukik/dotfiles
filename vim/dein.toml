@@ -1,0 +1,87 @@
+[[plugins]]
+  repo = 'Shougo/dein.vim'
+
+[[plugins]]
+  repo = 'Shougo/vimproc.vim'
+
+# 自動補完
+[[plugins]]
+  repo = 'Shougo/deoplete.nvim'
+  hook_add = '''
+    let g:deoplete#enable_at_startup = 1
+  '''
+
+# Docker
+[[plugins]]
+  repo = 'skanehira/docker.vim'
+  hook_add = '''
+    " open browser command, default is 'open'
+    let g:docker_open_browser_cmd = 'open'
+    " see :h vert
+    let g:docker_terminal_open = 'bo'
+    let g:docker_plugin_version_check = 1
+    let g:docker_registry_auth = {
+    	\ 'username': 'your name',
+    	\ 'password': 'your password',
+    	\ 'email': 'your email',
+    	\ 'serveraddress': 'https://index.docker.io/v1/',
+    	\ }
+  '''
+[[plugins]]
+  repo = 'skanehira/docker-compose.vim'
+
+[[plugins]]
+  repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+  repo = 'Shougo/neosnippet-snippets'
+
+# Linter
+[[plugins]]
+  repo = 'vim-syntastic/syntastic'
+[[plugins]]
+  repo = 'prabirshrestha/vim-lsp'
+  hook_add = '''
+    let g:lsp_diagnostics_echo_cursor = 1
+  '''
+[[plugins]]
+  repo = 'mattn/vim-lsp-settings'
+  hook_add = '''
+    " Enable flake8
+    let g:lsp_settings = {
+    \  'pyls-all': {
+    \    'workspace_config': {
+    \      'pyls': {
+    \        'configurationSources': ['flake8']
+    \      }
+    \    }
+    \  }
+    \}
+  '''
+
+# git
+[[plugins]]
+  repo = 'tpope/vim-fugitive'
+
+# comment
+[[plugins]]
+  repo = 'tomtom/tcomment_vim'
+
+# visualize indent
+[[plugins]]
+  repo = 'nathanaelkane/vim-indent-guides'
+
+# textile
+# call dein#add('timcharper/textile.vim', { 'on_ft': 'textile' })
+# call dein#add('amiorin/vim-textile', { 'on_ft': 'textile' })
+
+# markdown
+# call dein#add('gabrielelana/vim-markdown')
+# call dein#add('greyblake/vim-preview')
+
+
+# 括弧補間
+[[plugins]]
+  repo = 'cohama/lexima.vim'
+[[plugins]]
+  repo = 'tpope/vim-surround'
