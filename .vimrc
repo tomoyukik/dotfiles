@@ -8,16 +8,15 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-Bundle 'timcharper/textile.vim'
-Bundle 'amiorin/vim-textile'
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'neovimhaskell/haskell-vim'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-let g:TextileBrowser="Google Chrome"
 
 " Configuration file for vim
 set modelines=0		" CVE-2007-2438
@@ -36,7 +35,6 @@ let skip_defaults_vim=1
 " self-customize
 :syntax on
 set number
-colorscheme one
 
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
