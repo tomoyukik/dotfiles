@@ -25,6 +25,7 @@ if dein#load_state('/Users/koboriryouno/.cache/dein')
   call dein#add('Shougo/deoplete.nvim')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
+    " pip3 install --upgrade neovim
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
   let g:deoplete#enable_at_startup = 1
