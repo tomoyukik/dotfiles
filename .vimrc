@@ -30,6 +30,9 @@ if dein#load_state('/Users/koboriryouno/.cache/dein')
   endif
   let g:deoplete#enable_at_startup = 1
 
+  " メソッド定義
+  call dein#add('szw/vim-tags')
+
   call dein#add('tpope/vim-fugitive')
 
   " linter
@@ -41,6 +44,7 @@ if dein#load_state('/Users/koboriryouno/.cache/dein')
   " ruby
   call dein#add('ngmy/vim-rubocop', { 'on_ft': 'ruby' })
   call dein#add('vim-ruby/vim-ruby', { 'on_ft': 'ruby' })
+  call dein#add('tpope/vim-endwise', { 'on_ft': 'ruby' })
 
   " Required:
   call dein#end()
