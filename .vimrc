@@ -46,6 +46,9 @@ if dein#load_state('/Users/koboriryouno/.cache/dein')
   call dein#add('vim-ruby/vim-ruby', { 'on_ft': 'ruby' })
   call dein#add('tpope/vim-endwise', { 'on_ft': 'ruby' })
 
+  " call dein#add('timcharper/textile.vim', { 'on_ft': 'textile' })
+  " call dein#add('amiorin/vim-textile', { 'on_ft': 'textile' })
+
   " Required:
   call dein#end()
   call dein#save_state()
