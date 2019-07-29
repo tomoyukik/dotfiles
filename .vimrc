@@ -1,5 +1,4 @@
 set shell=bash
-set nocompatible	" Use Vim defaults instead of 100% vi compatibility
 
 "dein 設定 ===============================
 if &compatible
@@ -7,15 +6,15 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/koboriryouno/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=/Users/koboritomoyuki/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/Users/koboriryouno/.cache/dein')
-  call dein#begin('/Users/koboriryouno/.cache/dein')
+if dein#load_state('/Users/koboritomoyuki/.cache/dein')
+  call dein#begin('/Users/koboritomoyuki/.cache/dein')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/Users/koboriryouno/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('/Users/koboritomoyuki/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
@@ -31,7 +30,7 @@ if dein#load_state('/Users/koboriryouno/.cache/dein')
   let g:deoplete#enable_at_startup = 1
 
   " メソッド定義
-  call dein#add('szw/vim-tags')
+  " call dein#add('szw/vim-tags')
 
   call dein#add('tpope/vim-fugitive')
 
@@ -46,8 +45,8 @@ if dein#load_state('/Users/koboriryouno/.cache/dein')
   call dein#add('vim-ruby/vim-ruby', { 'on_ft': 'ruby' })
   call dein#add('tpope/vim-endwise', { 'on_ft': 'ruby' })
 
-  " call dein#add('timcharper/textile.vim', { 'on_ft': 'textile' })
-  " call dein#add('amiorin/vim-textile', { 'on_ft': 'textile' })
+  call dein#add('timcharper/textile.vim', { 'on_ft': 'textile' })
+  call dein#add('amiorin/vim-textile', { 'on_ft': 'textile' })
 
   " Required:
   call dein#end()
