@@ -45,6 +45,7 @@ if dein#load_state('/Users/koboritomoyuki/.cache/dein')
   call dein#add('vim-ruby/vim-ruby', { 'on_ft': 'ruby' })
   call dein#add('tpope/vim-endwise', { 'on_ft': 'ruby' })
 
+  " textile
   call dein#add('timcharper/textile.vim', { 'on_ft': 'textile' })
   call dein#add('amiorin/vim-textile', { 'on_ft': 'textile' })
 
@@ -82,12 +83,22 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set clipboard=unnamed
+set laststatus=2
+set statusline=[%n]
+set statusline+=%{matchstr(hostname(),'\\w\\+')}@
+set statusline+=%<%F
+set showcmd
+set spell
 
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 highlight LineNr ctermbg=none
 highlight Folded ctermbg=none
 highlight EndOfBuffer ctermbg=none 
+highlight StatusLine term=NONE cterm=NONE ctermfg=248 ctermbg=NONE
+highlight StatusLineNC term=NONE cterm=NONE ctermfg=251 ctermbg=NONE
+highlight VertSplit term=NONE cterm=NONE ctermfg=251 ctermbg=NONE
+highlight LineNr term=underline ctermfg=251 guifg=Grey
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
@@ -103,3 +114,4 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
 let g:syntastic_ruby_checkers=['rubocop']
 " ==================================================
+
