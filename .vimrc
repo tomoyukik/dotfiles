@@ -99,6 +99,7 @@ highlight StatusLine term=NONE cterm=NONE ctermfg=248 ctermbg=NONE
 highlight StatusLineNC term=NONE cterm=NONE ctermfg=251 ctermbg=NONE
 highlight VertSplit term=NONE cterm=NONE ctermfg=251 ctermbg=NONE
 highlight LineNr term=underline ctermfg=251 guifg=Grey
+highlight EndOfBuffer ctermfg=251
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
