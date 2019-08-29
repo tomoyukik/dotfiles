@@ -1,0 +1,8 @@
+[user]
+	email = kobori.tomoyuki@gmail.com
+[core]
+	editor = /usr/local/bin/vim
+[merge]
+	ff = false
+[pull]
+	ff = only
