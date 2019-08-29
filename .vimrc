@@ -46,8 +46,8 @@ if dein#load_state('/Users/koboritomoyuki/.cache/dein')
   call dein#add('tpope/vim-endwise', { 'on_ft': 'ruby' })
 
   " textile
-  call dein#add('timcharper/textile.vim', { 'on_ft': 'textile' })
-  call dein#add('amiorin/vim-textile', { 'on_ft': 'textile' })
+  " call dein#add('timcharper/textile.vim', { 'on_ft': 'textile' })
+  " call dein#add('amiorin/vim-textile', { 'on_ft': 'textile' })
 
   " Required:
   call dein#end()
@@ -103,6 +103,7 @@ highlight EndOfBuffer ctermfg=251
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
+nnoremap ; :
 
 " Linter ==================================================
 set statusline+=%#warningmsg#
