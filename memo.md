@@ -26,6 +26,7 @@ what is needed to dein install
 ### install dein
 
 - place .vimrc 
+- call dein#install()
 
 #### deoplete
   
@@ -45,3 +46,4 @@ latest ruby is installed with home brew maybe
 
 ### virtual box install
 
+### Day-O
