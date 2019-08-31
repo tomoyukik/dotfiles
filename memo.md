@@ -42,6 +42,11 @@ latest ruby is installed with home brew maybe
 
 - brew install fish
 
+- fisher install
+- power shell font install
+- oh-my-fish/theme-bobthefish install
+
+
 ### docker install
 
 ### virtual box install
