@@ -122,6 +122,7 @@ augroup vimrcEx
   \ exe "normal g`\"" | endif
 augroup END
 
+inoremap <silent> jj <ESC>
 " `:`と`;`の入れ替え
 nnoremap ; :
 nnoremap : ;
