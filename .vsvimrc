@@ -1,3 +1,8 @@
-nnoremap ; :
 set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:␣,extends:⟩,precedes:⟨
 
+inoremap <silent> jj <ESC>
+" `:`と`;`の入れ替え
+nnoremap ; :
+nnoremap : ;
+vnoremap : :
+vnoremap : ;

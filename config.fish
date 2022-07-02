@@ -27,6 +27,7 @@ set -g fish_user_paths "/usr/local/opt/openjdk/bin" $fish_user_paths
 # set -x CPPFLAGS "-I/usr/local/opt/tcl-tk/include"
 # set -x PKG_CONFIG_PATH "/usr/local/opt/tcl-tk/lib/pkgconfig"
 
+set -x GOOGLE_APPLICATION_CREDENTIALS ~/.config/gcloud/application_default_credentials.json
 
 
 set -x PYENV_ROOT $HOME/.pyenv
@@ -41,3 +42,5 @@ alias gitgraph="git log --oneline --decorate --graph --branches --tags --remotes
 if test -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
     source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 end
+
+fish_vi_key_bindings # set -o vi

@@ -97,7 +97,8 @@ set statusline+=%<%F
 set showcmd
 set spell
 set spelllang=en,cjk
-set cursorline
+set cursorcolumn " set vertical line
+set cursorline   " show vertical line
 set list
 set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:␣,extends:⟩,precedes:⟨
 
@@ -144,6 +145,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
 let g:syntastic_ruby_checkers=['rubocop', '--auto-correct']
+let g:python3_host_prog = '/usr/local/bin/python3'
 " ==================================================
 
 let g:indent_guides_enable_on_vim_startup = 1
@@ -156,3 +158,34 @@ endf
 autocmd BufNew,BufRead * call SOLSpaceHilight()
 autocmd BufWritePre * :%s/\s\+$//e
 
+" python auto format =====================================
+function! Preserve(command)
+    " Save the last search.
+    let search = @/
+    " Save the current cursor position.
+    let cursor_position = getpos('.')
+    " Save the current window position.
+    normal! H
+    let window_position = getpos('.')
+    call setpos('.', cursor_position)
+    " Execute the command.
+    execute a:command
+    " Restore the last search.
+    let @/ = search
+    " Restore the previous window position.
+    call setpos('.', window_position)
+    normal! zt
+    " Restore the previous cursor position.
+    call setpos('.', cursor_position)
+endfunction
+
+function! Autopep8()
+    "--ignote=E501: Ignore completing the length of a line."
+    call Preserve(':silent %!autopep8 --ignore=E501 -')
+endfunction
+
+augroup python_auto_lint
+  autocmd!
+  autocmd BufWrite *.py :call Autopep8()
+augroup END
+" end python auto format =================================

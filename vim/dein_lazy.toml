@@ -37,3 +37,8 @@
 [[plugins]]
   repo = 'tpope/vim-rails'
   on_ft = ['ruby']
+
+# fish
+[[plugins]]
+  repo = 'dag/vim-fish'
+  on_ft = ['fish']
