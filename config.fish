@@ -28,6 +28,7 @@ set -g fish_user_paths "/usr/local/opt/openjdk/bin" $fish_user_paths
 # set -x PKG_CONFIG_PATH "/usr/local/opt/tcl-tk/lib/pkgconfig"
 
 set -x GOOGLE_APPLICATION_CREDENTIALS ~/.config/gcloud/application_default_credentials.json
+set -x CLOUDSDK_PYTHON /Users/koboritomoyuki/.pyenv/shims/python
 
 
 set -x PYENV_ROOT $HOME/.pyenv
@@ -43,4 +44,5 @@ if test -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fis
     source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 end
 
-fish_vi_key_bindings # set -o vi
+# fish_vi_key_bindings # set -o vi # https://zenn.dev/kama_meshi/articles/af040b66204209
+fish_default_key_bindings
