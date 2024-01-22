@@ -1,8 +1,14 @@
 set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:␣,extends:⟩,precedes:⟨
 
+" jjでescape
 inoremap <silent> jj <ESC>
+
 " `:`と`;`の入れ替え
 nnoremap ; :
 nnoremap : ;
 vnoremap : :
 vnoremap : ;
+
+" wrap時の行移動
+nnoremap j gj
+nnoremap k gk
